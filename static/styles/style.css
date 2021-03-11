@@ -104,6 +104,11 @@ pre code {
     flex-grow: 0;
 }
 
+#ri_icon {
+    width: 1.75rem;
+    margin: -4px -5px 0px 0px;
+}
+
 #logo {
     margin-right: 0rem;
 }
