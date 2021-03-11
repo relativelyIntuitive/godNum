@@ -44,6 +44,10 @@ pre code {
     color: #adff2f;
 }
 
+.logo_colon {
+    color: #800080;
+}
+
 .content {
     min-height: 29rem;
     text-align: center;
@@ -106,7 +110,7 @@ pre code {
 
 #ri_icon {
     width: 1.75rem;
-    margin: -4px -5px 0px 0px;
+    margin: -4px -3px 0px 0px;
 }
 
 #logo {

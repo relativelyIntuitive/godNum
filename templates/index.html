@@ -24,8 +24,8 @@
                 <span class="navbar-toggler-icon"></span></button>
 
                 <a id="logo" class="navbar-brand" href="/">
+                    <span class="logo_god">god</span><span class="logo_num">Num</span><span class="logo_colon"> : </span>
                     <img id="ri_icon" src="{{ url_for('static', filename='/images/favicon.ico') }}">
-                    <span class="logo_god">god</span><span class="logo_num">Num</span>
                 </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,8 +65,19 @@
                         <br/>
                         <a class="btn-primary" href="/dividends">Dividends!</a>
                         <br/>
-                        <br/>
                         <a class="btn-primary" href="/factors">Factors!</a>
+                        <br/>
+                        <br/>
+                        <h4>Welcome!</h4>
+                        <p>
+                            This is a simple Flask site that I created to interact with a pair of original JavaScript algorithms that I created for experimenting with the relationship between factors and dividends.
+                            <br/>
+                            <br/>
+                            The JS script holding the algorithms is executed by the browser client-side, so there are some limitations as to the size of the parameters entered depending on the user's hardware. Some basic maximums are explained on each calculator.
+                            <br/>
+                            <br/>
+                            Start with low limits and rais them gradually! This is the intended experience, as the patterns of the relationship are best experienced starting from its inception at zero.
+                        </p>
                     </div>
                 </div>
             </div>
