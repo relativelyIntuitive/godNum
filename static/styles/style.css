@@ -94,8 +94,7 @@ pre code {
 
 /* || #ID Selectors */
 #wrapper {
-    background-color: slategray;
-    margin: -px;
+    background-color: teal;
     background-repeat:no-repeat;
     background-size: 100%;
     background-position: center;
