@@ -4,12 +4,6 @@ godNum = Flask(__name__)
 # (no sensitive data to worry about)
 godNum.secret_key = 'secretkey'
 
-def render_js(fname, *args):
-    with open(fname) as fin:
-        script = fin.read()
-        rendered_script = render_template_string(script, *args)
-        return rendered_script
-
 # home page
 @godNum.route('/')
 def index():
@@ -24,8 +18,6 @@ def dividendsInput():
 def dividendsCalculate():
     session['dividendsDividendLimit'] = request.form['dividendLimit']
     session['dividendsDivisorLimit'] = request.form['divisorLimit']
-    # jsDividends = render_js('godNumDividends.js', p1 = session['dividendsDividendLimit'], p2 = session['dividendsDivisorLimit'])
-    # session['dividendsResults'] = jsDividends
     return redirect('/dividends/results')
 
 @godNum.route('/dividends/results')
@@ -41,8 +33,6 @@ def factorsInput():
 def factorsCalculate():
     session['factorsDivisorLimit'] = request.form['divisorLimit']
     session['factorsDividendLimit'] = request.form['dividendLimit']
-    # jsFactors= render_js('godNumFactors.js', p1 = session['factorsDivisorLimit'], p2 = session['factorsDividendLimit'])
-    # session['factorsResults'] = jsFactors
     return redirect('/factors/results')
 
 @godNum.route('/factors/results')
@@ -51,4 +41,4 @@ def factorsResults():
 
 # Ensure this file is being run directly and not from a different module    
 if __name__=="__main__":   
-    godNum.run(debug=True)
+    godNum.run(debug=False)
