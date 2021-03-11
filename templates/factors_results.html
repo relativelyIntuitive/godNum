@@ -46,12 +46,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
-                            <img id="li_icon" src="{{ url_for('static', filename='/images/linkedin_icon_square.png') }}" alt="missing icon!">
+                            <img id="li_icon" src="{{ url_for('static', filename='/images/linkedin_icon_square_orange.png') }}" alt="missing icon!">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.github.com/relativelyintuitive/" target="_blank">
-                            <img id="gh_icon" src="{{ url_for('static', filename='/images/github_icon_square.png') }}" alt="missing icon!">
+                            <img id="gh_icon" src="{{ url_for('static', filename='/images/github_icon_square_orange.png') }}" alt="missing icon!">
                         </a>
                     </li>
                 </ul>
@@ -64,8 +64,6 @@
                 <div class="col">
                     <div class="content container">
                         <h1>Factors Tester</h1>
-                        <a href="/dividends">Back to input</a>
-                        <br/>
                         <br/>
                         <h2>Limit Parameters Input:</h2>
                         <br/>
@@ -74,6 +72,8 @@
                         <h4>Dividend Limit: {{dividendLimit}}</h4>
                         <br/>
                         <h1>Results:</h1>
+                        <a class="back" href="/dividends">Back to input</a>
+                        <br/>
                         <br/>
                         <p id="results">
                             <script type="text/javascript">

@@ -67,7 +67,7 @@ pre code {
 
 .input-group-text {
     color: #ffa500;
-    text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
+    /* text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e; */
 }
 
 .custom-file-label {
@@ -87,9 +87,15 @@ pre code {
     text-align: center;
 }
 
+.back {
+    color: #800080;
+    text-decoration: underline;
+}
+
 /* || #ID Selectors */
 #wrapper {
-    background-color: #0d0d0e;
+    background-color: slategray;
+    margin: -px;
     background-repeat:no-repeat;
     background-size: 100%;
     background-position: center;
@@ -148,14 +154,9 @@ pre code {
     color: #ffa500;
     border: 0.18rem solid #adff2f;
     border-radius: 3rem;
-    text-shadow: -1px 0 #0d0d0e, 0 1px #0d0d0e, 1px 0 #0d0d0e, 0 -1px #0d0d0e;
+    /* text-shadow: -1px 0 #0d0d0e, 0 1px #0d0d0e, 1px 0 #0d0d0e, 0 -1px #0d0d0e; */
     font-size: 1rem;
     padding: 1rem;
-}
-
-.content a {
-    color: #ffa500;
-    text-decoration: underline;
 }
 
 textarea.form-control {
