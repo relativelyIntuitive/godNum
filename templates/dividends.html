@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="https://github.com/relativelyIntuitive">
+    <meta name="description"
+        content="ZeeboVO is a proffessional provider of rich and charismatic vocal recordings for ANY voiceover! Narrations, character voices, explainer videos, audiobooks, corporate / industrial films, phone systems and more! Book today!">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/style.css') }}">
+    <meta property=”og:image” content="{{ url_for('static', filename='/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/favicon.ico') }}">
+
+    <title>godNum</title>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+
+                <a id="logo" class="navbar-brand" href="/">
+                    <span class="logo_god">god</span><span class="logo_num">Num</span>
+                </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/dividends"><strong>Dividends</strong><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/factors"> Factors </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
+                            <img id="li_icon" src="{{ url_for('static', filename='/images/linkedin_icon_square.png') }}" alt="missing icon!">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
+                            <img id="gh_icon" src="{{ url_for('static', filename='/images/github_icon_square.png') }}" alt="missing icon!">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br/>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="container">
+                                    <h1>Dividend Tester</h1>
+                                    <br/>
+                                    <h3>Calculates a list of dividends up through the dividend limit that are evenly divisible by every divisor up through the divisor limit.</h3>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="container">
+                                    <form action="/dividends/calculate" method="POST">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">Dividend Limit:</span>
+                                                    </div>
+                                                    <input name="dividendLimit" type="text" class="form-control"
+                                                        placeholder="Highest dividend to test" aria-label="Dividend limit field">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon2">Divisor Limit:</span>
+                                                    </div>
+                                                    <input name="divisorLimit" type="text" class="form-control"
+                                                        placeholder="Highest divisor to test" aria-label="Divisor limit field">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h5>(any limit over 8 digits long may cause the page to become unresponsive!)</h5>
+                                        <br/>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary btn-lg">Calculate</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div class="row">
+                            <div class="col">
+                                <h2>JS Algorithm:</h2>
+                                <h5>(scroll laterally)</h5>
+                                <div class="code container">
+                                    <pre><code>
+// "dividendLimit" represents the highest dividend to test...
+// "divisorLimit" represents the highest divisor to test...
+function godNumDividends(dividendLimit, divisorLimit) {
+    // declare variables...
+    let dividends = [];
+    let results = "";
+
+    // test each dividend up through the limit
+    for (dividend = 1; dividend &lt= dividendLimit; dividend++) {
+        let isCommonDividend = false
+        for(divisor = 1; divisor &lt= divisorLimit; divisor++) {
+            if (dividend % divisor === 0 && divisor === divisorLimit && isCommonDividend === true) {
+                isCommonDividend = true;
+                dividends.push(dividend);
+            } else if (dividend % divisor === 0){
+                isCommonDividend = true;
+            } else {
+                isCommonDividend = false;
+                break;
+            }
+        }
+    }
+
+    // compile the results
+    if (dividends.length === 0) {
+        results = `No dividends up through ${dividendLimit} are divisible by every number up through ${divisorLimit}!`;
+    } else if (dividends.length === 1) {
+        results = `${dividends[0]} is the only number up through ${dividendLimit} divisible by every number up through ${divisorLimit}!`;
+    } else if (dividends.length === 2) {
+        results = `${dividends[0]} and ${dividends[1]} are the only numbers up through ${dividendLimit} divisible by every number up through ${dividendLimit}!`;
+    } else{
+        for (i = 0; i &lt dividends.length - 1; i++) {
+            results += `${dividends[i]},\n`;
+        }
+        results += `${dividends[dividends.length - 2]}\n and ${dividends[dividends.length - 1]} are the only numbers up through ${dividendLimit} divisible by every number up through ${divisorLimit}!`;
+    }
+
+    // print and return the results!
+    console.log('***********');
+    console.log(results);
+    console.log('***********');
+    return dividends;
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p><strong> Copyright ©2020 Zachery A. Bielicki, all rights reserved </strong></p>
+        </div>
+    </div>
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+</html>

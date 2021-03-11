@@ -1,0 +1,164 @@
+
+/* CSS global resets*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* || <TAG> Selectors */
+body {
+    background-color: #0d0d0e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffa500;
+    text-shadow: -2px 0 #0d0d0e, 0 2px #0d0d0e, 2px 0 #0d0d0e, 0 -2px #0d0d0e;
+}
+
+h1 {
+    color: #adff2f;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h2 {
+    font-style: italic;
+}
+
+h3, h4, h5 {
+    text-shadow: -1.5px 0 #0d0d0e, 0 1.5px #0d0d0e, 1.5px 0 #0d0d0e, 0 -1.5px #0d0d0e;
+}
+
+pre code {
+    color: #ffa500;
+    text-shadow: -1px 0 #0d0d0e, 0 1px #0d0d0e, 1px 0 #0d0d0e, 0 -1px #0d0d0e;
+}
+
+/* || .CLASS Selectors */
+.logo_god {
+    color: #ffa500;
+}
+
+.logo_num {
+    color: #adff2f;
+}
+
+.content {
+    min-height: 29rem;
+    text-align: center;
+}
+
+.code {
+    background-color: #800080;
+    border: 0.18rem solid #adff2f;
+    border-radius: 3rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.input-group {
+    text-align: start;
+}
+
+.input-group-text {
+    color: #ffa500;
+    text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: #800080;
+    color: #adff2f;
+    display: block;
+    width: 31rem;
+    max-width: 95%;
+    margin: auto;
+    border: 0.18rem solid #ffa500;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* || #ID Selectors */
+#wrapper {
+    background-color: #0d0d0e;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#header {
+    margin-bottom: 13px;
+    justify-content: space-between;
+}
+
+#navbarSupportedContent {
+    flex-grow: 0;
+}
+
+#logo {
+    margin-right: 0rem;
+}
+
+#li_icon {
+    width: 2rem;
+    margin: -4px 0px 0px 0px;
+}
+
+#gh_icon {
+    width: 2rem;
+    margin: -4px 0px 0px 0px;
+}
+
+#results {
+    font-size: 1.75rem;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+#footer {
+    background-color: #343a40;
+    width: 100%;
+    margin-top: 31px;
+    display: flex;
+    vertical-align: auto;
+    justify-content: space-between;
+}
+
+/* || Combo-Selectors */
+.content p {
+    background-color: #800080;
+    color: #ffa500;
+    border: 0.18rem solid #adff2f;
+    border-radius: 3rem;
+    text-shadow: -1px 0 #0d0d0e, 0 1px #0d0d0e, 1px 0 #0d0d0e, 0 -1px #0d0d0e;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.content a {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+textarea.form-control {
+    height: 5.71rem;
+}
+
+#footer p{
+    color: #adff2f;
+    margin: 1rem;
+}
+
+#header .nav-link {
+    color: #adff2f;
+}
+
