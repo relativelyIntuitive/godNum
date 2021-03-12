@@ -12,6 +12,10 @@ def index():
 # dividends calculator input
 @godNum.route('/dividends')
 def dividendsInput():
+    if not session['dividendsDividendLimit']:
+        session['dividendsDividendLimit'] = 0
+    if not session['dividendsDivisorLimit']:
+        session['dividendsDivisorLimit'] = 0
     return render_template('dividends.html', dividendLimit = session['dividendsDividendLimit'], divisorLimit = session['dividendsDivisorLimit'])
 
 @godNum.route('/dividends/calculate', methods=['POST'])
@@ -22,15 +26,15 @@ def dividendsCalculate():
 
 @godNum.route('/dividends/results')
 def dividendsResults():
-    session['dividendsDividendLimit'] = 0
-    session['dividendsDivisorLimit'] = 0
     return render_template('dividends_results.html', dividendLimit = session['dividendsDividendLimit'], divisorLimit = session['dividendsDivisorLimit'])
 
 # factor calculator input
 @godNum.route('/factors')
 def factorsInput():
-    session['factorsDivisorLimit'] = 0
-    session['factorsDividendLimit'] = 0
+    if not session['factorsDivisorLimit']:
+        session['factorsDivisorLimit'] = 0
+    if not session['factorsDividendLimit']:
+        session['factorsDividendLimit'] = 0
     return render_template('factors.html', divisorLimit = session['factorsDivisorLimit'], dividendLimit = session['factorsDividendLimit'])
 
 @godNum.route('/factors/calculate', methods=['POST'])
