@@ -16,7 +16,7 @@ def dividendsInput():
         session['dividendsDividendLimit'] = 0
     if 'dividendsDivisorLimit' not in session:
         session['dividendsDivisorLimit'] = 0
-    return render_template('dividends.html', dividendLimit = session['dividendsDividendLimit'], divisorLimit = session['dividendsDivisorLimit'])
+    return render_template('dividends.html', dividendLimit = int(session['dividendsDividendLimit']), divisorLimit = int(session['dividendsDivisorLimit']))
 
 @godNum.route('/dividends/calculate', methods=['POST'])
 def dividendsCalculate():
@@ -26,7 +26,7 @@ def dividendsCalculate():
 
 @godNum.route('/dividends/results')
 def dividendsResults():
-    return render_template('dividends_results.html', dividendLimit = session['dividendsDividendLimit'], divisorLimit = session['dividendsDivisorLimit'])
+    return render_template('dividends_results.html', dividendLimit = int(session['dividendsDividendLimit']), divisorLimit = int(session['dividendsDivisorLimit']))
 
 # factor calculator input
 @godNum.route('/factors')
@@ -35,7 +35,7 @@ def factorsInput():
         session['factorsDivisorLimit'] = 0
     if'factorsDividendLimit' not in session:
         session['factorsDividendLimit'] = 0
-    return render_template('factors.html', divisorLimit = session['factorsDivisorLimit'], dividendLimit = session['factorsDividendLimit'])
+    return render_template('factors.html', divisorLimit = int(session['factorsDivisorLimit']), dividendLimit = int(session['factorsDividendLimit']))
 
 @godNum.route('/factors/calculate', methods=['POST'])
 def factorsCalculate():
@@ -45,7 +45,7 @@ def factorsCalculate():
 
 @godNum.route('/factors/results')
 def factorsResults():
-    return render_template('factors_results.html', divisorLimit = session['factorsDivisorLimit'], dividendLimit = session['factorsDividendLimit'])
+    return render_template('factors_results.html', divisorLimit = int(session['factorsDivisorLimit']), dividendLimit = int(session['factorsDividendLimit']))
 
 # Ensure this file is being run directly and not from a different module    
 if __name__=="__main__":   
