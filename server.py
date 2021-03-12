@@ -12,7 +12,7 @@ def index():
 # dividends calculator input
 @godNum.route('/dividends')
 def dividendsInput():
-    return render_template('dividends.html')
+    return render_template('dividends.html', dividendLimit = session['dividendsDividendLimit'], divisorLimit = session['dividendsDivisorLimit'])
 
 @godNum.route('/dividends/calculate', methods=['POST'])
 def dividendsCalculate():
@@ -27,7 +27,7 @@ def dividendsResults():
 # factor calculator input
 @godNum.route('/factors')
 def factorsInput():
-    return render_template('factors.html')
+    return render_template('factors.html', divisorLimit = session['factorsDivisorLimit'], dividendLimit = session['factorsDividendLimit'])
 
 @godNum.route('/factors/calculate', methods=['POST'])
 def factorsCalculate():

@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span></button>
 
                 <a id="logo" class="navbar-brand" href="/">
-                    <span class="logo_god">god</span><span class="logo_num">Num</span><span class="logo_colon"> : </span>
+                    <span class="logo_god">god</span><span class="logo_num">Num</span><span class="logo_colon"><strong> : </strong></span>
                     <img id="ri_icon" src="{{ url_for('static', filename='/images/favicon.ico') }}">
                 </a>
 
@@ -80,7 +80,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">Dividend Limit:</span>
                                                     </div>
-                                                    <input name="dividendLimit" type="text" class="form-control"
+                                                    <input name="dividendLimit" type="text" value="{{dividendLimit}}"class="form-control"
                                                         placeholder="Highest dividend to test" aria-label="Dividend limit field">
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon2">Divisor Limit:</span>
                                                     </div>
-                                                    <input name="divisorLimit" type="text" class="form-control"
+                                                    <input name="divisorLimit" type="text" value="{{divisorLimit}}"class="form-control"
                                                         placeholder="Highest divisor to test" aria-label="Divisor limit field">
                                                 </div>
                                             </div>
@@ -103,7 +103,7 @@
 
                                         <div class="row">
                                             <div class="col">
-                                                <button type="submit" class="btn btn-primary btn-lg">Calculate</button>
+                                                <button type="submit" class="btn btn-primary btn-lg">Calculate!</button>
                                             </div>
                                         </div>
                                     </form>
@@ -115,7 +115,7 @@
                         <div class="row">
                             <div class="col">
                                 <h2>JS Algorithm:</h2>
-                                <h5>(scroll laterally)</h5>
+                                <h5>(scrolls laterally)</h5>
                                 <div class="code container">
                                     <pre><code>
 // "dividendLimit" represents the highest dividend to test...
@@ -171,7 +171,7 @@ function godNumDividends(dividendLimit, divisorLimit) {
         </div>
 
         <div id="footer">
-            <p><strong> Copyright ©2020 Zachery A. Bielicki, all rights reserved </strong></p>
+            <p><strong> Copyright ©2021 Zachery A. Bielicki, all rights reserved </strong></p>
         </div>
     </div>
 
