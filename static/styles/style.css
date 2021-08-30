@@ -36,42 +36,14 @@ pre code {
 }
 
 /* || .CLASS Selectors */
-.logo_god {
-    color: #ffa500;
+
+.back {
+    color: #800080!important;
+    text-decoration: none!important;
 }
 
-.logo_num {
-    color: #adff2f;
-}
-
-.logo_colon {
-    color: #800080;
-}
-
-.content {
-    min-height: 29rem;
-    text-align: center;
-}
-
-.code {
-    background-color: #800080;
-    border: 0.18rem solid #adff2f;
-    border-radius: 3rem;
-    padding: 1rem;
-    text-align: left;
-}
-
-.input-group {
-    text-align: start;
-}
-
-.input-group-text {
-    color: #ffa500;
-    text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
-}
-
-.custom-file-label {
-    overflow: hidden;
+.back:hover{
+    color: #ffa500!important;
 }
 
 .btn-primary {
@@ -87,12 +59,109 @@ pre code {
     text-align: center;
 }
 
-.back {
+.btn-primary:hover {
+    color: #800080!important;
+    background-color: #ffa500!important;
+    border: 3px solid #ffa500!important;
+    box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500!important;
+}
+
+.btn-primary:focus {
+    color: #800080!important;
+    background-color: #ffa500!important;
+    border: 3px solid #800080!important;
+    box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500!important;
+}
+
+.code {
+    background-color: #800080;
+    border: 0.18rem solid #adff2f;
+    border-radius: 3rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.content {
+    min-height: 100vh;
+    text-align: center;
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+.input-group {
+    text-align: start;
+}
+
+.input-group-text {
+    color: #ffa500;
+    text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
+}
+
+.logoBy {
     color: #800080;
-    text-decoration: underline;
+}
+
+.logoGod {
+    color: #ffa500;
+}
+
+.logoNum {
+    color: #adff2f;
+}
+
+.nav-link {
+    color: #adff2f!important;
+}
+.nav-link:hover {
+    color: #ffa500!important;
+}
+
+.socialIcon {
+    width: 2rem;
+    margin: -4px 0px 0px 0px;
+}
+
+.socialIcon:hover {
+    box-shadow: 0px 0px 1px #adff2f inset, 0px 0px 8px #adff2f;
 }
 
 /* || #ID Selectors */
+
+#footer {
+    background-color: #343a40;
+    width: 100%;
+    margin-top: 31px;
+    display: flex;
+    vertical-align: auto;
+    justify-content: space-between;
+}
+
+#header {
+    margin-bottom: 13px;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-right: 0rem;
+}
+
+#navbarSupportedContent {
+    flex-grow: 0;
+}
+
+#results {
+    font-size: 1.75rem;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+#ri_icon {
+    width: 1.75rem;
+    margin: -4px -3px 0px 0px;
+}
+
 #wrapper {
     background-color: teal;
     background-repeat:no-repeat;
@@ -102,49 +171,6 @@ pre code {
     max-width: 100%;
     padding-right: 0px;
     padding-left: 0px;
-}
-
-#header {
-    margin-bottom: 13px;
-    justify-content: space-between;
-}
-
-#navbarSupportedContent {
-    flex-grow: 0;
-}
-
-#ri_icon {
-    width: 1.75rem;
-    margin: -4px -3px 0px 0px;
-}
-
-#logo {
-    margin-right: 0rem;
-}
-
-#li_icon {
-    width: 2rem;
-    margin: -4px 0px 0px 0px;
-}
-
-#gh_icon {
-    width: 2rem;
-    margin: -4px 0px 0px 0px;
-}
-
-#results {
-    font-size: 1.75rem;
-    word-wrap: break-word;
-    text-align: left;
-}
-
-#footer {
-    background-color: #343a40;
-    width: 100%;
-    margin-top: 31px;
-    display: flex;
-    vertical-align: auto;
-    justify-content: space-between;
 }
 
 /* || Combo-Selectors */
@@ -166,8 +192,3 @@ textarea.form-control {
     color: #adff2f;
     margin: 1rem;
 }
-
-#header .nav-link {
-    color: #adff2f;
-}
-
