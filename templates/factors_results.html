@@ -19,7 +19,7 @@
     <!-- script to get results from algo -->
     <script type="text/javascript" src="{{ url_for('static', filename='/js/godNumFactors.js') }}"></script>
     <script type="text/javascript">
-        let results = godNumFactors({{ divisorLimit| safe}}, { { dividendLimit | safe } });
+        let results = godNumFactors({{divisorLimit|safe}}, {{dividendLimit|safe}});
     </script>
 
     <title>godNum</title>

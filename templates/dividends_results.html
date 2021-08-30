@@ -19,7 +19,7 @@
     <!-- script to get results from algo -->
     <script type="text/javascript" src="{{ url_for('static', filename='/js/godNumDividends.js') }}"></script>
     <script type="text/javascript">
-        let results = godNumDividends({{ dividendLimit| safe}}, { { divisorLimit } });
+        let results = godNumDividends({{dividendLimit|safe}}, {{divisorLimit|safe}});
     </script>
 
     <title>godNum</title>
@@ -91,11 +91,7 @@
                         <br />
                         <p id="results">
                             <script type="text/javascript">
-                                for (result of results) {
-                                    document.write(result);
-                                    document.write("<br/>");
-                                    document.write("<br/>");
-                                }
+                                document.write(results);
                             </script>
                         </p>
                     </div>
