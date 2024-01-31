@@ -1,6 +1,6 @@
 "# godNum" 
 
-This is a simple Flask site that I created to interact with a pair of original JavaScript algorithms that I created for experimenting with the relationship between factors and dividends.
+A simple Flask site that I created to interact with a pair of original algorithms for experimenting with the relationship between factors and dividends.
 
 The JS script holding the algorithms is executed by the browser client-side, so there are some limitations as to the size of the parameters entered depending on the user's hardware. Some basic maximums are explained on each calculator.
 
